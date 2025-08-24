@@ -1,26 +1,26 @@
 {
-    "height": 1080,
-    "width": 1920,
+    "height": 360,
+    "width": 640,
     "crs": "PROJCRS[\"WGS 84 / UTM zone 35S\",BASEGEOGCRS[\"WGS 84\",ENSEMBLE[\"World Geodetic System 1984 ensemble\",MEMBER[\"World Geodetic System 1984 (Transit)\"],MEMBER[\"World Geodetic System 1984 (G730)\"],MEMBER[\"World Geodetic System 1984 (G873)\"],MEMBER[\"World Geodetic System 1984 (G1150)\"],MEMBER[\"World Geodetic System 1984 (G1674)\"],MEMBER[\"World Geodetic System 1984 (G1762)\"],MEMBER[\"World Geodetic System 1984 (G2139)\"],MEMBER[\"World Geodetic System 1984 (G2296)\"],ELLIPSOID[\"WGS 84\",6378137,298.257223563,LENGTHUNIT[\"metre\",1]],ENSEMBLEACCURACY[2.0]],PRIMEM[\"Greenwich\",0,ANGLEUNIT[\"degree\",0.0174532925199433]],ID[\"EPSG\",4326]],CONVERSION[\"UTM zone 35S\",METHOD[\"Transverse Mercator\",ID[\"EPSG\",9807]],PARAMETER[\"Latitude of natural origin\",0,ANGLEUNIT[\"degree\",0.0174532925199433],ID[\"EPSG\",8801]],PARAMETER[\"Longitude of natural origin\",27,ANGLEUNIT[\"degree\",0.0174532925199433],ID[\"EPSG\",8802]],PARAMETER[\"Scale factor at natural origin\",0.9996,SCALEUNIT[\"unity\",1],ID[\"EPSG\",8805]],PARAMETER[\"False easting\",500000,LENGTHUNIT[\"metre\",1],ID[\"EPSG\",8806]],PARAMETER[\"False northing\",10000000,LENGTHUNIT[\"metre\",1],ID[\"EPSG\",8807]]],CS[Cartesian,2],AXIS[\"(E)\",east,ORDER[1],LENGTHUNIT[\"metre\",1]],AXIS[\"(N)\",north,ORDER[2],LENGTHUNIT[\"metre\",1]],USAGE[SCOPE[\"Navigation and medium accuracy spatial referencing.\"],AREA[\"Between 24\u00b0E and 30\u00b0E, southern hemisphere between 80\u00b0S and equator, onshore and offshore. Botswana. Burundi. Democratic Republic of the Congo (Zaire). Rwanda. South Africa. Tanzania. Uganda. Zambia. Zimbabwe.\"],BBOX[-80,24,0,30]],ID[\"EPSG\",32735]]",
     "resolution": 0.01,
     "lens_position": null,
     "gcps": {
         "src": [
             [
-                1421,
-                1001
+                500,
+                100
             ],
             [
-                1251,
-                460
+                200,
+                110
             ],
             [
-                421,
-                432
+                200,
+                300
             ],
             [
-                470,
-                607
+                620,
+                150
             ]
         ],
         "dst": [
@@ -46,18 +46,16 @@
     },
     "window_size": 25,
     "is_nadir": false,
-    "rvec": null,
-    "tvec": null,
     "camera_matrix": [
         [
-            1429.53515625,
+            523.673583984375,
             0.0,
-            960.0
+            320.0
         ],
         [
             0.0,
-            1429.53515625,
-            540.0
+            523.673583984375,
+            180.0
         ],
         [
             0.0,
@@ -82,5 +80,15 @@
             0.0
         ]
     ],
-    "bbox": "POLYGON ((642730.1121877227 8304293.174474483, 642731.2193550617 8304302.710415994, 642739.3646384338 8304301.764710558, 642738.2574710948 8304292.228769047, 642730.1121877227 8304293.174474483))"
+    "rvec": [
+        0.8026231010000954,
+        -1.9097283696977947,
+        1.5867299924317428
+    ],
+    "tvec": [
+        6483259.978018942,
+        -1052815.1294409307,
+        5121855.4478557985
+    ],
+    "bbox": "POLYGON ((642737.8613198455 8304296.215679906, 642736.0234585041 8304291.9987775255, 642730.7523305276 8304294.296104201, 642732.5901918691 8304298.513006582, 642737.8613198455 8304296.215679906))"
 }
