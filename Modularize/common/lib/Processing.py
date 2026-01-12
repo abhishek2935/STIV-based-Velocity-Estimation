@@ -31,9 +31,6 @@ def process(VideoPath , JSONpath , bbox_coords , NetCDF_path ):
     da_norm = da.frames.normalize()
     da_norm_proj = da_norm.frames.project(method="numpy") # remove method = numpy to use default OpenCV method 
 
-    da_rgb = video.get_frames(method="rgb")
-    da_rgb_proj = da_rgb.frames.project()
-
     piv = da_norm_proj.frames.get_piv(engine="numba") # Velocimetry Computation (PIV / FFPIV / OpenPIV)
 
     if (NetCDF_path):
@@ -44,7 +41,18 @@ def process(VideoPath , JSONpath , bbox_coords , NetCDF_path ):
 
 ##--------
 
-def mask(VideoPath , NetCDF_path , Masked_NetCDF_Path):
+def mask():
+    ds_mask = copy.deepcopy
+    mask_corr = ds_mask.velocimetry.mask.corr(inplace=True)
+    mask_minmax = ds_mask.velocimetry.mask.minmax(inplace=True)
+    mask_rolling = ds_mask.velocimetry.mask.rolling(inplace=True)
+    mask_outliers = ds_mask.velocimetry.mask.outliers(inplace=True)
+    mask_var = ds_mask.velocimetry.mask.variance(inplace=True)
+    mask_angle = ds_mask.velocimetry.mask.angle(inplace=True)
+    mask_count = ds_mask.velocimetry.mask.count(inplace=True)
+    
+
+def mask2(VideoPath , NetCDF_path , Masked_NetCDF_Path):
 
     video_file = VideoPath     # parameter 1 
     ds = xr.open_dataset(NetCDF_path)  # parameter 2
@@ -56,7 +64,7 @@ def mask(VideoPath , NetCDF_path , Masked_NetCDF_Path):
 
     #da_rgb = video.get_frames(method="rgb")
 
-
+    ## Mask
     ds_mask2 = copy.deepcopy(ds)
     ds_mask2.velocimetry.mask.corr(inplace=True)
     ds_mask2.velocimetry.mask.minmax(inplace=True)
